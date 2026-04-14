@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AssoLegal - Associazione giuridica di studi e cultura legale</title>
+  <meta name="description" content="AssoLegal - tutela tecnica e legale nelle procedure concorsuali. Tesseramento annuale euro 40,00." />
+  <style>
+    :root {
+      --blue:#12328b;
+      --blue-dark:#0b1f57;
+      --orange:#ef8a2f;
+      --light:#f5f6fa;
+      --text:#1b2233;
+      --muted:#5d667a;
+      --card:#ffffff;
+      --border:rgba(18,50,139,.12);
+      --shadow:0 18px 45px rgba(10,20,50,.10);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#f6f7fb 0%,#eef2fb 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:30;
+      backdrop-filter: blur(10px);
+      background:rgba(255,255,255,.82);
+      border-bottom:1px solid rgba(18,50,139,.08);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:18px;
+      min-height:82px;
+    }
+    .brand{display:flex;align-items:center;gap:14px;font-weight:700;color:var(--blue-dark)}
+    .brand img{height:56px;width:auto}
+    .brand small{display:block;font-size:.82rem;color:var(--muted);font-weight:400}
+    .menu{display:flex;gap:20px;flex-wrap:wrap;font-size:.98rem}
+    .menu a{color:var(--blue-dark)}
+    .cta{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 18px;border-radius:999px;background:var(--orange);color:#fff;
+      font-weight:700;box-shadow:var(--shadow)
+    }
+    .hero{padding:56px 0 34px}
+    .hero-grid{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;padding:8px 14px;border-radius:999px;
+      color:var(--blue);background:rgba(18,50,139,.08);font-size:.92rem;
+      letter-spacing:.02em
+    }
+    h1{
+      font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.02;margin:16px 0 18px;color:var(--blue-dark)
+    }
+    .lead{font-size:1.18rem;line-height:1.65;color:#30384b;max-width:760px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+    .ghost{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 18px;border-radius:999px;border:1px solid var(--border);
+      background:#fff;color:var(--blue-dark);font-weight:700
+    }
+    .hero-card{
+      background:#fff;border:1px solid var(--border);border-radius:30px;box-shadow:var(--shadow);overflow:hidden
+    }
+    .hero-card img{display:block;width:100%;height:100%;object-fit:cover;max-height:640px}
+    section{padding:34px 0}
+    .section-title{font-size:2rem;color:var(--blue-dark);margin:0 0 10px}
+    .section-intro{font-size:1.08rem;color:var(--muted);max-width:820px;line-height:1.7;margin:0 0 22px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      padding:24px;box-shadow:var(--shadow)
+    }
+    .card h3{margin:0 0 10px;color:var(--blue-dark);font-size:1.18rem}
+    .card p{margin:0;line-height:1.7;color:#374055}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery figure{
+      margin:0;background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)
+    }
+    .gallery img{display:block;width:100%;height:420px;object-fit:cover}
+    .gallery figcaption{padding:14px 16px;font-size:.98rem;color:#374055;line-height:1.55}
+    .pricing{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch
+    }
+    .price-box{
+      background:linear-gradient(135deg,var(--blue-dark),var(--blue));color:#fff;border-radius:28px;padding:30px;box-shadow:var(--shadow)
+    }
+    .price-box .price{font-size:3.4rem;font-weight:700;line-height:1;margin:12px 0}
+    .price-box p{line-height:1.7;color:rgba(255,255,255,.92)}
+    .info-box{
+      background:#fff;border-radius:28px;padding:30px;border:1px solid var(--border);box-shadow:var(--shadow)
+    }
+    .info-box dl{margin:0;display:grid;grid-template-columns:120px 1fr;gap:14px 16px}
+    .info-box dt{font-weight:700;color:var(--blue-dark)}
+    .info-box dd{margin:0;color:#374055;line-height:1.7;word-break:break-word}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{
+      background:#fff;border-radius:22px;padding:22px;border:1px solid var(--border);box-shadow:var(--shadow)
+    }
+    .num{
+      width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+      background:rgba(239,138,47,.14);color:var(--orange);font-weight:700;margin-bottom:14px
+    }
+    .quote{
+      background:#fff;border-left:5px solid var(--orange);padding:22px 24px;border-radius:16px;box-shadow:var(--shadow);line-height:1.8;color:#2e3649
+    }
+    footer{
+      margin-top:24px;padding:34px 0 44px;background:var(--blue-dark);color:#fff
+    }
+    .foot{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end}
+    .foot small{display:block;color:rgba(255,255,255,.78);line-height:1.7}
+    .legal-note{font-size:.95rem;color:#f4d7be}
+    @media (max-width: 980px){
+      .hero-grid,.pricing,.foot{grid-template-columns:1fr}
+      .cards,.gallery,.steps{grid-template-columns:1fr 1fr}
+      .menu{display:none}
+    }
+    @media (max-width: 640px){
+      .cards,.gallery,.steps{grid-template-columns:1fr}
+      .brand img{height:48px}
+      h1{font-size:2.2rem}
+      .lead{font-size:1.04rem}
+      .info-box dl{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <img src="assets/logo-assolegal.png" alt="Logo AssoLegal" />
+        <div>
+          <div>ASSOLEGAL</div>
+          <small>Associazione giuridica di studi e cultura legale</small>
+        </div>
+      </a>
+      <nav class="menu">
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#attivita">Attività</a>
+        <a href="#campagna">Immagine</a>
+        <a href="#tesseramento">Tesseramento</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <a class="cta" href="#tesseramento">Iscriviti</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Tutela tecnica e legale nelle procedure concorsuali</span>
+          <h1>AssoLegal</h1>
+          <p class="lead">
+            Un progetto associativo pensato per affiancare chi si trova dentro procedure complesse,
+            contenziosi delicati e ricostruzioni dei fatti spesso parziali. AssoLegal nasce per dare
+            metodo, studio, presenza e supporto tecnico-giuridico a chi rischia di restare solo.
+          </p>
+          <div class="hero-actions">
+            <a class="cta" href="#tesseramento">Tesseramento annuale € 40,00</a>
+            <a class="ghost" href="#chi-siamo">Scopri l’associazione</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/fumetto-0.jpg" alt="Campagna visiva AssoLegal" />
+        </div>
+      </div>
+    </section>
+
+    <section id="chi-siamo">
+      <div class="wrap">
+        <h2 class="section-title">Chi siamo</h2>
+        <p class="section-intro">
+          AssoLegal è una realtà associativa orientata allo studio, alla cultura giuridica e al supporto
+          tecnico nelle situazioni in cui il diritto alla difesa rischia di essere soffocato dalla complessità
+          delle procedure. L’obiettivo è offrire un luogo serio di confronto, approfondimento e affiancamento.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Studio degli atti</h3>
+            <p>Analisi documentale, lettura integrata dei fascicoli, verifica delle ricostruzioni e attenzione alle omissioni che possono alterare il quadro reale.</p>
+          </article>
+          <article class="card">
+            <h3>Approccio tecnico</h3>
+            <p>Approfondimento dei profili bancari, contabili, procedurali e probatori che spesso fanno la differenza nelle procedure concorsuali e nei contenziosi collegati.</p>
+          </article>
+          <article class="card">
+            <h3>Cultura della difesa</h3>
+            <p>AssoLegal promuove una visione concreta del diritto di difesa: non solo forma, ma presenza, confronto, metodo e capacità di riportare i fatti al centro.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="attivita">
+      <div class="wrap">
+        <h2 class="section-title">Ambiti di attenzione</h2>
+        <p class="section-intro">
+          Il taglio del progetto è pratico. Non una vetrina astratta, ma un punto di riferimento per chi ha bisogno di capire, ordinare, contestare, ricostruire e difendersi con serietà.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <h3>Procedure concorsuali</h3>
+            <p>Lettura critica di atti, relazioni, passivi, ricostruzioni patrimoniali e flussi, con particolare attenzione alle anomalie documentali.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h3>Supporto associativo</h3>
+            <p>Condivisione di strumenti, orientamento, confronto e iniziative culturali per non lasciare il singolo isolato davanti alla procedura.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h3>Approfondimento giuridico</h3>
+            <p>Studio di temi processuali, tecnici e difensivi, anche in collegamento con situazioni penali, civili e fallimentari tra loro connesse.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="campagna">
+      <div class="wrap">
+        <h2 class="section-title">Immagine e messaggio</h2>
+        <p class="section-intro">
+          Le immagini che hai preparato funzionano molto bene come linguaggio identitario: raccontano solitudine procedurale, ricostruzioni già confezionate e il momento in cui arriva un supporto vero. Qui sotto le ho inserite come galleria narrativa del sito.
+        </p>
+        <div class="gallery">
+          <figure>
+            <img src="assets/fumetto-1.jpg" alt="Quando una vicenda giudiziaria diventa più grande di te" />
+            <figcaption>Quando una vicenda giudiziaria diventa più grande di te, il primo bisogno è non restare isolato davanti agli atti.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/fumetto-2.jpg" alt="Non sei solo nelle procedure" />
+            <figcaption>La comunicazione di AssoLegal parla di presenza, ascolto, confronto e supporto nelle procedure più difficili.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/fumetto-3.jpg" alt="Ricostruzioni e verifica dei fatti" />
+            <figcaption>Non basta una versione dei fatti: serve studio, verifica, investigazione documentale e ricerca delle prove.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/fumetto-4.jpg" alt="Raccontare ciò che l'accusa non basta a spiegare" />
+            <figcaption>La narrazione associativa mette al centro il diritto alla difesa quando l’accusa sembra già aver deciso tutto.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/fumetto-5.jpg" alt="Dalla difficoltà nasce un progetto più grande" />
+            <figcaption>Dal bisogno di tutela può nascere una realtà associativa capace di accompagnare altri nelle stesse difficoltà.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/logo-assolegal.png" alt="Logo ufficiale AssoLegal" />
+            <figcaption>Il logo richiama equilibrio, tutela, tecnica e legalità: base visiva pulita per sito, locandine e tesseramento.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="quote">
+          <strong>Idea guida del sito:</strong> quando la procedura diventa opaca, dispersiva o schiacciante,
+          AssoLegal vuole offrire un punto fermo: studio degli atti, cultura giuridica, supporto tecnico e presenza associativa.
+        </div>
+      </div>
+    </section>
+
+    <section id="tesseramento">
+      <div class="wrap pricing">
+        <div class="price-box">
+          <div class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff">Tesseramento associativo</div>
+          <div class="price">€ 40,00</div>
+          <p><strong>Quota annuale.</strong> Il tesseramento sostiene le attività associative, i momenti di studio, le iniziative culturali e lo sviluppo del progetto AssoLegal.</p>
+          <p>Il sito è già impostato in modo che tu possa poi aggiungere un pulsante per domanda di adesione, modulo online oppure pagamento con bonifico.</p>
+          <p><a class="ghost" style="background:#fff;color:var(--blue-dark);border:none;margin-top:8px" href="#contatti">Vedi dati associativi</a></p>
+        </div>
+        <div class="info-box">
+          <h2 class="section-title" style="font-size:1.6rem;margin-top:0">Dati da pubblicare</h2>
+          <dl>
+            <dt>Denominazione</dt>
+            <dd>ASSOLEGAL – Associazione giuridica di studi e cultura legale</dd>
+            <dt>Indirizzo</dt>
+            <dd>Via Fosse Ardeatine 7, 43123 Parma (PR), Italia</dd>
+            <dt>Quota</dt>
+            <dd>Tesseramento annuale: euro 40,00</dd>
+            <dt>IBAN</dt>
+            <dd>IT98 H032 6822 3000 5248 9188 760</dd>
+            <dt>Causale consigliata</dt>
+            <dd>Tesseramento annuale AssoLegal – nome e cognome del socio</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <div class="wrap">
+        <h2 class="section-title">Contatti e informazioni</h2>
+        <p class="section-intro">
+          Questa prima versione del sito è pronta per essere pubblicata come pagina istituzionale. Si possono aggiungere subito modulo contatti, richiesta adesione, area news, sezione eventi, statuto e PDF scaricabili.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Indirizzo</h3>
+            <p>Via Fosse Ardeatine 7<br>43123 Parma (PR)<br>Italia</p>
+          </article>
+          <article class="card">
+            <h3>Tesseramento</h3>
+            <p>Quota associativa annuale: <strong>€ 40,00</strong><br>Bonifico su IBAN indicato nel sito con causale nominativa.</p>
+          </article>
+          <article class="card">
+            <h3>Sviluppi successivi</h3>
+            <p>Posso trasformare questa base in un sito più completo con modulo iscrizione, pagina “chi siamo”, eventi, statuto, privacy e grafica ancora più incisiva.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <div style="font-size:1.5rem;font-weight:700;margin-bottom:8px">ASSOLEGAL</div>
+        <small>Associazione giuridica di studi e cultura legale<br>Via Fosse Ardeatine 7, 43123 Parma (PR), Italia</small>
+      </div>
+      <div class="legal-note">Tesseramento annuale € 40,00 · IBAN: IT98 H032 6822 3000 5248 9188 760</div>
+    </div>
+  </footer>
+</body>
+</html>
