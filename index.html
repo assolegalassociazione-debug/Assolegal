@@ -345,10 +345,12 @@ Richiedi adesione
             <dt>Quota</dt>
             <dd>Tesseramento annuale: euro 40,00</dd>
             <dt>IBAN</dt>
-           <button onclick="copiaIBAN()" 
-style="margin-top:10px; padding:10px 16px; border:none; border-radius:20px; background:#f5a623; color:#fff; font-weight:600; cursor:pointer;">
+           <dd id="iban">IT98 H032 6822 3000 5248 9188 760</dd>
+
+<a href="#" onclick="navigator.clipboard.writeText('IT98H0326822300052489188760'); alert('IBAN copiato'); return false;"
+style="display:inline-block; margin-top:10px; padding:10px 16px; border-radius:20px; background:#f5a623; color:#fff; font-weight:600; text-decoration:none;">
 Copia IBAN
-</button>
+</a>
             <dt>Causale consigliata</dt>
             <dd>Tesseramento annuale AssoLegal – nome e cognome del socio</dd>
           </dl>
