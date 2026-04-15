@@ -339,26 +339,29 @@ Perché ogni storia merita di essere compresa, non semplicemente decisa.
       </div>
     </section>
 
-    <section id="contatti">
-      <div class="wrap">
-        <h2 class="section-title">Contatti e informazioni</h2>
-        <p class="section-intro">
-          Questa prima versione del sito è pronta per essere pubblicata come pagina istituzionale. Si possono aggiungere subito modulo contatti, richiesta adesione, area news, sezione eventi, statuto e PDF scaricabili.
-        </p>
-        <div class="cards">
-          <article class="card">
-            <h3>Indirizzo</h3>
-            <p>Via Fosse Ardeatine 7<br>43123 Parma (PR)<br>Italia</p>
-          </article>
-          <article class="card">
-            <h3>Tesseramento</h3>
-            <p>Quota associativa annuale: <strong>€ 40,00</strong><br>Bonifico su IBAN indicato nel sito con causale nominativa.</p>
-          </article>
-          <article class="card">
-            <h3>Sviluppi successivi</h3>
-            <p>Posso trasformare questa base in un sito più completo con modulo iscrizione, pagina “chi siamo”, eventi, statuto, privacy e grafica ancora più incisiva.</p>
-          </article>
-        </div>
+<h2 class="section-title">Contattaci</h2>
+
+<p style="text-align:center; max-width:600px; margin:0 auto 30px;">
+Raccontaci la tua situazione. Ti ricontatteremo con metodo e riservatezza.
+</p>
+
+<form action="https://formspree.io/f/INSERISCI_ID" method="POST"
+style="max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px;">
+
+  <input type="text" name="nome" placeholder="Nome e Cognome" required
+    style="padding:12px; border-radius:8px; border:1px solid #ccc;">
+
+  <input type="email" name="email" placeholder="Email" required
+    style="padding:12px; border-radius:8px; border:1px solid #ccc;">
+
+  <textarea name="messaggio" placeholder="Descrivi brevemente la tua situazione..." rows="5" required
+    style="padding:12px; border-radius:8px; border:1px solid #ccc;"></textarea>
+
+  <button type="submit" class="cta" style="align-self:center;">
+    Richiedi analisi
+  </button>
+
+</form>
       </div>
     </section>
   </main>
